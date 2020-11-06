@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/cutPicturesMan/webpack-demo#readme",
   "dependencies": {
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "webpack": "^4.16.0"
   },
   "devDependencies": {
