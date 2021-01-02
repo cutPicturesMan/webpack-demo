@@ -20,10 +20,14 @@
   },
   "homepage": "https://github.com/cutPicturesMan/webpack-demo#readme",
   "dependencies": {
-    "jquery": "^3.3.1",
-    "webpack": "^4.16.0"
+    "babel-core": "^6.26.3",
+    "html-webpack-plugin": "^4.5.0",
+    "jquery": "^3.3.1"
   },
   "devDependencies": {
-    "webpack-cli": "^3.0.8"
+    "@babel/core": "^7.12.9",
+    "babel-loader": "^8.2.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   }
 }
