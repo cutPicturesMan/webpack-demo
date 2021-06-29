@@ -4,33 +4,34 @@ const path = require('path');
 
 const config = {
   mode: 'development',
-  entry: {
-    a: './src/index.js',
-    b: './src/b.js'
-  },
-	// entry: [
-		// './src/index.js',
-		// './src/b.js'
-	// ],
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-		// publicPath: 'https://cdn.example.com/assets/[hash]/',
-  },
+  entry: './src/index.js',
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        include: path.resolve(__dirname, 'src')
-      },
+        {
+            test: /\.(png|jpe?g|gif)$/i,
+            use: [
+                {
+                    loader: 'file-loader',
+                },
+            ],
+        },
+        // {
+        //     test: /\.(png|jpg|gif)$/i,
+        //     use: [
+        //         {
+        //             loader: 'url-loader',
+        //             options: {
+        //                 limit: 8192,
+        //             },
+        //         },
+        //     ],
+        // },
+        {
+            test: /\.txt$/i,
+            use: 'raw-loader',
+        },
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({template: './index.html'})
-  ],
-	externals: {
-		jquery: 'abcd'
-	}
 }
 
 module.exports = config;
